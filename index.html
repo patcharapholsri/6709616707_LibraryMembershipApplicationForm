@@ -14,33 +14,37 @@
     <fieldset>
       <legend>Personal Information ข้อมูลส่วนบุคคล</legend>
       <label for="thainame">Thai Name / ชื่อไทย:</label>
-      <input type="text" id="thainame" name="thainame"><br><br>
+      <input type="text" id="thainame" name="thainame" maxlength="30" size="30"
+      placeholder="Maxlength 30 characters" required><br><br>
     
       <label for="engname">English Name / ชื่ออังกฤษ:</label>
-      <input type="text" id="engname" name="engname"><br><br>
+      <input type="text" id="engname" name="engname" maxlength="30" size="30"
+      placeholder="Maxlength 30 characters" required><br><br>
 
       <label for="gender">Gender / เพศ:</label><br>
-      <input type="radio" id="male" name="gender" value="male">
+      <input type="radio" id="male" name="gender" value="male" required>
       <label for="male">ชาย</label><br>
-      <input type="radio" id="female" name="gender" value="female">
+      <input type="radio" id="female" name="gender" value="female" required>
       <label for="female">หญิง</label><br>
-      <input type="radio" id="nongender" name="gender" value="nongender">
+      <input type="radio" id="nongender" name="gender" value="nongender" required>
       <label for="nongender">ไม่ระบุ</label><br><br>
 
       <label for="studentid">รหัสนักศึกษา:</label>
-      <input type="text" id="studentid" name="studentid"><br><br>
+      <input type="number" id="studentid" name="studentid" min="1000000000" max="9999999999" size="10"
+       placeholder="Maxlength 10 numbers" required><br><br>
 
       <label for="faculty">คณะที่ศึกษา:</label>
-      <select id="faculty" name="faculty">
-        <option value="1. คณะนิติศาสตร์">1. คณะนิติศาสตร์</option>
-        <option value="2. คณะพาณิชยศาสตร์และการบัญชี">2. คณะพาณิชยศาสตร์และการบัญชี</option>
-        <option value="3. คณะรัฐศาสตร์">3. คณะรัฐศาสตร์</option>
-        <option value="4. คณะเศรษฐศาสตร์">4. คณะเศรษฐศาสตร์</option>
+      <select id="faculty" name="faculty" required>
+        <option value="none">ไม่ได้เลือก</option>
+        <option value="1. คณะนิติศาสตร์" required>1. คณะนิติศาสตร์</option>
+        <option value="2. คณะพาณิชยศาสตร์และการบัญชี" required>2. คณะพาณิชยศาสตร์และการบัญชี</option>
+        <option value="3. คณะรัฐศาสตร์" required>3. คณะรัฐศาสตร์</option>
+        <option value="4. คณะเศรษฐศาสตร์" required>4. คณะเศรษฐศาสตร์</option>
       </select>
       <br><br>
 
-      <label for="engname">Email:</label>
-      <input type="text" id="engname" name="engname"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
 
       <label for="birthday">Birthday / วันเกิด:</label>
       <input type="date" id="birthday" name="birthday"><br><br>
@@ -60,7 +64,8 @@
       </select>
       <br><br>
 
-      <input type="checkbox" id="emailnotification" name="emailnotification" value="emailnotification">
+      <input type="checkbox" id="emailnotification" name="emailnotification"
+       value="emailnotification" checked>
       <label for="emailnotification">ต้องการรับข่าวสารข้อมูลของห้องสมุดทางอีเมลหรือไม่</label><br>
       
       <br>
